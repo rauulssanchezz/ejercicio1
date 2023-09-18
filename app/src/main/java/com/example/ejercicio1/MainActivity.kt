@@ -20,21 +20,25 @@ class MainActivity : AppCompatActivity() {
 
         val fondu = findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.fondo)
 
+        var cont=0
 
 
+        boton.setOnClickListener {
+            cont++
+            if(cont%2==0) {
+                texto.text = "Hola bebe"
+                texto.textSize = 20F
+                texto.setBackgroundColor(resources.getColor(R.color.black))
+                fondu.setBackgroundColor(resources.getColor(R.color.green))
 
-        boton.setOnClickListener{
-            texto.text="Hola bebe"
-            texto.textSize= 20F
-            texto.setBackgroundColor(resources.getColor(R.color.black))
-            fondu.setBackgroundColor(resources.getColor(R.color.green))
-            //if (boton){
-              //  texto.text="Adios bebe"
-                //texto.textSize= 10F
-                //texto.setBackgroundColor(resources.getColor(R.color.green))
-                //fondu.setBackgroundColor(resources.getColor(R.color.black))
+            }else{
+
+                  texto.text="Adios bebe"
+                texto.textSize= 10F
+                texto.setBackgroundColor(resources.getColor(R.color.green))
+                fondu.setBackgroundColor(resources.getColor(R.color.black))
             }
         }
-
+    }
         }
 
